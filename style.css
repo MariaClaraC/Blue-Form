@@ -1,0 +1,187 @@
+* {
+    font-family: Poppins;
+}
+
+
+body {
+    background-image: linear-gradient(90deg,#66a6ff,#89f7fe);
+    color: #1a263f;
+}
+
+.container {
+    width: 360px;
+    height: 470px;
+    padding: 10px 40px;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: #fefeff;    
+    border-radius: 10px;
+    box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+}
+
+
+.titulo-contato, .subtitulo {
+    text-align: center;
+    margin-bottom: -10px;
+}
+
+.grupo {
+    margin-top: 1.5em;
+    border: #ffffff;
+    border-top: 1px solid #b3b3b3;
+}
+
+.campo {
+    float:  left;
+    margin-right: 3px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: #ffffff;
+}
+
+.email input {
+    width: 96.6%;
+    padding: .2em;
+}
+
+.campo input[type="text"], .email input[type="email"], .campo-texto textarea {
+    padding: .2em;
+    border: 1px solid #b3b3b3;
+    display: block;
+}
+
+textarea {
+    resize: none; /*Para retirar o redimensionamento da area de texto*/
+    width: 357px; 
+    margin: 0px -2px 0px 0px; 
+    height: 120px;  
+}
+  
+.botao:active {
+    background: #0a0a0a;
+    transform: translateY(4px);
+} 
+  
+.botao {
+    padding: 20px;
+    width: 200px;
+    font-size: 1.2em;
+    border: none;
+    color: #ffffff;
+    background: #090a14;
+    background-size: 200%;
+
+    margin-top: 20px;
+    padding: 0.2em 0.6em;
+
+    position: relative;
+    left: 22%;
+
+    border-radius: 4px;
+    box-shadow: 2px 5px #b3b3b3;
+
+    transition: all 0.5s;
+    cursor: pointer;
+}
+  
+.botao span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+  
+.botao span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+  
+.botao:hover span {
+    padding-right: 25px;
+}
+  
+.botao:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+/* referencia para os botões -
+https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_animate1
+
+https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_animate3
+*/
+
+
+/*media query*/
+@media (max-width: 991px) { 
+    html {
+        font-size: 100%;
+    }
+}
+
+@media (max-width: 425px) { /*pc*/
+    .container {
+        width: 290px;
+        height: 520px;
+    }
+    .campo {
+        float:  none;
+        width: 96.6%;
+    }
+    
+    .campo input {
+        width: 96.6%;
+    }
+
+    textarea {
+        width: 280px;
+        margin: 0px 5.6875px 0px 0px; 
+        height: 103px;
+    }
+
+    .botao {
+        left: 20%;
+        }
+}
+
+@media (max-width: 375px) { 
+    .container {
+        width: 250px;
+        height: 520px;
+    }
+
+    textarea {
+        width: 251px;
+    }
+
+    .botao {
+        left: 10%;
+        }
+    
+}
+
+@media (max-width: 320px) { /*celular*/
+    html {
+        font-size: 14px;
+    }
+        .container {
+        width: 200px;
+    }
+
+    textarea {
+        width: 205px;
+        height: 69px;
+    }
+
+    .botao {
+    left: 0;
+    }
+}
